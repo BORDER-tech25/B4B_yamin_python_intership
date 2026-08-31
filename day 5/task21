@@ -1,0 +1,27 @@
+class Wallet:
+    def __init__(self):
+        self.__balance = 0
+
+    def deposit(self, amount):
+        if amount > 0:
+            self.__balance += amount
+        else:
+            print("Deposit amount must be positive.")
+
+    def withdraw(self, amount):
+        if amount <= 0:
+            print("Withdrawal amount must be positive.")
+        elif amount > self.__balance:
+            print("Insufficient balance.")
+        else:
+            self.__balance -= amount
+
+    @property
+    def balance(self):
+        return self.__balance
+
+
+wallet = Wallet()
+wallet.deposit(500)
+wallet.withdraw(200)
+print(wallet.balance)
