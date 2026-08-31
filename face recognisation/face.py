@@ -45,4 +45,5 @@ while True:
     if key == ord('q'):
         break
 
-cv2.destroyAllWindows()
+cv2.destroyAllWindows()   
+#adil is great
